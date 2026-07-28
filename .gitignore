@@ -1,0 +1,13 @@
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Language artifacts
+__pycache__/
+*.pyc
+*.class
+*.o
+*.exe
+*.out
