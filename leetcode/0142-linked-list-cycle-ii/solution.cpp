@@ -16,12 +16,12 @@ public:
         ListNode* slow = head;
         ListNode* fast = head;
 
-        // 1. 快慢指针相遇（和 141 一样）
+        // 第一阶段：快慢指针找相遇点（判断有没有环）
         while (fast != nullptr && fast->next != nullptr) {
             slow = slow->next;
             fast = fast->next->next;
             if (slow == fast) {
-                // 2. 一个回到头，两个一次一步，再相遇处就是环入口
+                // 第二阶段：一个从 head 走，一个从相遇点走，各走一步，相遇处即环入口
                 ListNode* p = head;
                 while (p != slow) {
                     p = p->next;
